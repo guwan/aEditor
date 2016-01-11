@@ -63,5 +63,5 @@ npm-debug.log
 .cram/
 dist/
 
-#personal net proxy
+#personal proxy
 gradle.properties
