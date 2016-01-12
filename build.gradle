@@ -85,4 +85,3 @@ task npmBuild(dependsOn: npmInstall, type: NpmTask) {
 }
 
 jar.dependsOn npmBuild
-bootRun.dependsOn jar

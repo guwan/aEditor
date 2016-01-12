@@ -14,8 +14,8 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     VersionResourceResolver versionResourceResolver = new VersionResourceResolver()
         .addVersionStrategy(new ContentVersionStrategy(), "/**");
 
-    registry.addResourceHandler("/lib/**")
-        .addResourceLocations("classpath:/dist/lib/")
+    registry.addResourceHandler("/lib/*.js")
+        .addResourceLocations("classpath:/lib/")
         .setCachePeriod(60 * 60 * 24 * 365) /* one year */
         .resourceChain(true)
         .addResolver(versionResourceResolver);
