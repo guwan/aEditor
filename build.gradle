@@ -17,6 +17,7 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: 'war'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot' 
@@ -44,13 +45,11 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
-	//maven {
-	//     url "http://repo1.maven.org/maven2/"
-	//}
-	maven {
-	     url "https://repo1.gradle.org/m2/"
-	}
 	mavenCentral()
+	maven {
+	     url "http://repo1.maven.org/maven2/"
+	     //url "https://repo1.gradle.org/m2/"
+	}
 }
 
 
@@ -59,6 +58,11 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	runtime('com.h2database:h2')
 	testCompile('org.springframework.boot:spring-boot-starter-test') 
+	
+	// Thymeleaf is used as the template engine for serving HTML
+  compile 'org.thymeleaf:thymeleaf'
+  compile 'org.thymeleaf:thymeleaf-spring4'
+  compile 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 }
 
 
@@ -81,3 +85,4 @@ task npmBuild(dependsOn: npmInstall, type: NpmTask) {
 }
 
 jar.dependsOn npmBuild
+bootRun.dependsOn jar
