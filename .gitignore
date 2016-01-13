@@ -63,6 +63,8 @@ npm-debug.log
 .cram/
 dist/
 src/main/resources/static/lib
+src/main/resources/static/run.js
+src/main/resources/static/run.js.map
 
 #personal net proxy
 gradle.properties

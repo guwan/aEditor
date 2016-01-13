@@ -10,7 +10,7 @@
         "jquery": "2.2.0",
         "bootstrap": "~2.3",
         "bootstrap-datetimepicker": "0.0.10",
-        "font-awesome": "3.2.1",
+        "font-awesome": "4.1.0",
         "gmaps": "0.4.14",
         "zeroclipboard": "1.1.7",
         "google-code-prettify": "~1.0",
@@ -40,7 +40,7 @@
             "ignore": ["build/**", "test/**"]
         },
         "font-awesome": {
-            "ignore": ["css/**", "less/**", "scss/**", "src/**"]
+            "ignore": ["less/**", "scss/**", "src/**"]
         },
         "gmaps": {
             "ignore": ["examples/**", "test/**"]
